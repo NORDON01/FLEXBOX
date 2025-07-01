@@ -4,11 +4,13 @@ body{
 
 .container{
     border: solid red 2px;
+    height: 40vh;
 }
 
 .box{
     text-align: center;
     color: #f3f3f3;
+    width: 50px;
 }
 
 .box-1{
@@ -29,4 +31,9 @@ body{
 
 .box-5{
     background-color: green;
+}
+
+.generic{
+    width: 100px;
+    background-color: blue;
 }

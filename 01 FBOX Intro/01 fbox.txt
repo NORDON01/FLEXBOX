@@ -2,3 +2,24 @@
 EMMET
 ===*/
 (.box.box-${$})*5
+
+/*=====
+DISPLAY
+=====*/
+
+display: flex; displays across the screen 100% 
+display: inline-flex; displays around the elements depending on their sizes.
+
+
+/*===============
+PARENT PROPERTIES
+===============*/
+
+*** flex-direction:row(default), row-reverse, column, column-reverse.
+
+*** flex-wrap: nowrap (default), wrap;
+    nowrap: tous les éléments seront sur une seule ligne.
+
+*** justify-content: flex-start(default), flex-end, space-between, space-around, space-evenly, center;
+
+*** align-items:stretch (default), flex-start, flex-end, center, baseline. 
