@@ -1,10 +1,15 @@
 body{
     background-color: lightgray;    
-}
+} 
 
 .container{
     border: solid red 2px;
     height: 40vh;
+    width: 50vw;
+    display: flex;
+    flex-wrap:wrap;
+    align-content: space-evenly;
+    justify-content: end;
 }
 
 .box{

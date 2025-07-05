@@ -3,7 +3,7 @@
 }
 .plage{
     width:100vw;
-    max-height: 50vh;
+    min-height: 100vh;
     background: url(./pexels-asadphoto-457882.jpg);
     background-position: center;
     background-size: cover;

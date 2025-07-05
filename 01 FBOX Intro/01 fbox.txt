@@ -15,7 +15,7 @@ display: inline-flex; displays around the elements depending on their sizes.
 PARENT PROPERTIES
 ===============*/
 
-*** flex-direction:row(default), row-reverse, column, column-reverse.
+*** flex-direction:row(default), row-reverse, column, column-reverse. 
 
 *** flex-wrap: nowrap (default), wrap;
     nowrap: tous les éléments seront sur une seule ligne.
@@ -23,3 +23,88 @@ PARENT PROPERTIES
 *** justify-content: flex-start(default), flex-end, space-between, space-around, space-evenly, center;
 
 *** align-items:stretch (default), flex-start, flex-end, center, baseline. 
+
+*** align-content
+
+*** main axis - cross axis
+
+flex-direction: row (default) ==>
+        main axis is horizontal (row)
+        cross axis is vertical
+
+flex-direction: column ==>
+        main axis is vertical (column)
+        cross axis is horizontal
+
+/*==============
+CHILD PROPERTIES
+==============*/
+*** Order property:
+Without changing the HTML, I can move the child elements around. The default order value is 0. If a box element gets a value more than 0, it will be placed after the other boxes. If it gets negative value, it will be placed before.
+Example:
+   .box-1{
+        order:2 //box-1 gets placed after boxes which have order less than 2;
+   }
+
+*** align-self:
+align-self permet d'affecter des propriétés spécifiques à un élément, qui déroge à la disposition des autres éléments.Exemple:
+
+.container{
+  display:flex;
+  flex-direction:row    //default
+  align-items:flex-end; //For all boxes
+}
+
+.box-1{
+   align-self:flex-start;
+}
+
+*** flex-grow:
+Default for the boxes is "flex-grow:0". "flex-grow:1" will fill the container (no more free space left). Example:
+
+box-1{
+        flex-grow:1;     
+}
+
+box-2{
+        flex-grow:2;    
+}
+
+box-2 takes twice as much space as box-1;
+
+*** flex-shrink:
+Default for the boxes is "flex-shrink:1".
+But if one box has "flex-shrink:0", this box will not shrink as the container gets smaller. Eventualy the other boxes will need to wrap if the container gets too small.
+
+*** Flex-basis & flex:
+flex = flex-grow flex-shrink flex-basis;
+
+.box{
+   flex-basis: 150px;   //No box can be less than 150px wide;
+}
+
+When working with flexBox don't use any padding, specially left & right.
+
+Example 1
+.box{
+   flex: 1 0 150px; //box can grow, can not shrink, can not be smaller than 150px;
+}
+
+Example 2
+.box{
+   flex: 0 0 25%; //box can not grow, can not shrink, can not be smaller than 25% of container width;
+}
+
+
+Example 3
+.box{
+   flex: 0 0 calc(25% - 1rem); //box can not grow, can not shrink, can not be smaller than 25% of container width, minus 1rem spacing between boxes.
+}
+
+/*====================
+NEW FLEXBOX PROPERTIES
+====================*/
+gap property
+
+
+

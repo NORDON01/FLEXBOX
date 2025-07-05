@@ -1,0 +1,21 @@
+**********************
+COLOR SHADES GENERATOR
+**********************
+  https://mdigi.tools/color/
+  https://colorkit.co/palettes/
+  https://tailscan.com/colors
+
+****
+LOGO
+****
+https://blog-ux.com/comment-creer-un-logo-avec-figma/
+
+*******
+FAVICON
+*******
+ <!-- favicon -->
+<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+1 - https://favicon.io
+
+2 - Generate from text
