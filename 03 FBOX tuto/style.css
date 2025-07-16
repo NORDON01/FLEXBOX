@@ -1,0 +1,8 @@
+.parent{
+    display:flex;
+}
+
+.third{flex: 0 1 300px};
+.second{flex: 0 1 300px};
+.first{flex: 0 1 300px};
+.fourth{flex: 0 1 300px};

@@ -19,3 +19,112 @@ FAVICON
 1 - https://favicon.io
 
 2 - Generate from text
+
+************
+INLINE-BLOCK
+************
+Compared to display: the major difference is that inline-block allows to set a width and height on the element.
+
+***************
+INPUT ou BUTTON
+***************
+  <input type="submit"...>
+  ou
+  <button type= "submit"...>
+
+  Les deux sont possibles.
+
+**************************
+A (address ?) and I (icon)
+**************************
+<a href="" class="gallery-icon">
+        <i class="fas fa-search"></i>
+</a>
+
+*****************************************
+POSITION RELATIVE & ABSOLUTE POUR CENTRER
+*****************************************
+.gallery-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%); /* 50% of its width to the left, 50% of its height to the top */ 
+
+  **********************
+  CHANGING ROOT FONTSIZE
+  **********************
+.html{
+  font-size:24px; //16px par défaut
+}
+
+****
+FLEX
+****
+https://www.youtube.com/watch?v=w9lsR2tvkvQ&t=601s
+
+flex:0 1 auto;//Default values
+
+"width" does NOT take into account its content to determine its size. This can result in an overflow : the child can be larger than the parent.
+"flex" does so that the child does not overflow.
+
+Ex 1:
+.parent{
+    display:flex;
+}
+
+ .child{     /* default values */
+    flex-grow: 0;   /* no grow*/
+    flex-shrink: 1; /* shrink */
+    flex-basis: auto;/* The boxes will shrink to a minimum  */ 
+} 
+
+Ex 2:
+flex:1 1 auto;
+Child boxes can grow and occupy all the left over space in the parent box.
+
+Ex 3:  child first gets 3 times more left over space than child second:
+
+ATTENTION A L'ORDRE DES BOX
+.first{flex: 3 1 auto};
+.second{flex: 1 1 auto};
+
+Ex 4:
+.parent{
+    display:flex;
+}
+
+.third{flex: 1 1 auto};
+.second{flex: 0 1 auto};
+.first{flex: 0 1 auto};
+.fourth{flex: 0 1 auto};
+
+Seule la box "third" pourra grossir et occuper l'espace encore disponible.
+
+Ex 5 Flexbox + Media queries:
+
+*{
+  box-sizing: border-box;
+}
+
+.gallery-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-img-container{
+  max-width: 24rem;
+  flex:1 0 auto;
+  background: var(--clr-primary-5);
+  object-fit: cover;
+  opacity: 0.9;
+  transition: var(--transition);
+}
+
+@media screen and(min-width:24rem) {
+  .gallery-img-container{
+    max-width: 24rem;
+    flex:0 0 12rem; /* 12rem = 192px */
+  }
+}
