@@ -128,3 +128,31 @@ Ex 5 Flexbox + Media queries:
     flex:0 0 12rem; /* 12rem = 192px */
   }
 }
+
+************
+NON SELECTOR
+************
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}  
+
+********************
+CENTRER UNE ELEMENT
+********************
+  La raison la plus courante pour laquelle j'utilise auto est : margin: 0 auto; pour centrer un élément.
+
+https://ishadeed.com/article/auto-css/
+
+
+**************************
+WIDTH HEIGHT OF TAG & AUTO
+**************************
+- The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+
+- max-width overrides width , but min-width overrides max-width.
+
+- When a child element has "width:auto" value, it can have margin, padding, and border without becoming bigger than its parent element. The width of its content box will be the content itself with the subtraction of margin, padding, and border.
+
+- By default <div>, <p> elements have "width:auto".
+  But if child element is changed to "width:100%" its width will be "width:auto" + margins.
